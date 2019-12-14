@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AssignPerson4 {
+public class AssignPerson5 {
     public static void main(String[] args) {
         int donationThing;
         String WorkerDudes;
@@ -16,8 +16,16 @@ public class AssignPerson4 {
 
         Scanner input = new Scanner(System.in);
         System.out.println("What this be?");
-        System.out.print("Enter " + CLOTHING_STUFF + " for clothing, " + ELECTRONIC_STUFF + " for electronics, " + FURNITURE_STUFF + " for furniture and " + OTHER_STUFF + " for anything else. " );
+        System.out.print("Enter " + CLOTHING_STUFF + " for clothing, " + ELECTRONIC_STUFF + " for electronics, "
+                + FURNITURE_STUFF + " for furniture and " + OTHER_STUFF + " for anything else. ");
         donationThing = input.nextInt();
+
+        while (donationThing < CLOTHING_STUFF || donationThing > OTHER_STUFF) {
+            System.out.println("You entered " + donationThing + " which is not a valid donation type");
+            System.out.print("Please enter a value between " + CLOTHING_STUFF + " and " + OTHER_STUFF + "... ");
+            System.out.print("Enter an integer... ");
+            donationThing = input.nextInt();
+        }
 
         switch (donationThing) {
         case (CLOTHING_STUFF): {
@@ -40,12 +48,12 @@ public class AssignPerson4 {
             message = "another donation type";
             break;
         }
-        default: {
+        default: { //no longer reachable because while-loop forces valid choice
             WorkerDudes = "Nobody, just choose 1, 2, 3 or 4 you childish moron";
             message = "invalid donation type cause you clearly didn't read / choose to ignore the instructions";
         }
         }
-        
+
         System.out.println("This is a " + message);
         System.out.println("You entered " + donationThing);
         System.out.println("The volunteer who will price this item is " + WorkerDudes);
