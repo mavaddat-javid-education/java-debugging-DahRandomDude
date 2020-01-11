@@ -26,7 +26,7 @@ public class DebugSeven2
              num = Integer.parseInt(partStr);
              System.out.println("                " + num);
              sum = num;
-             lastSpace == x;
+             lastSpace = x;
           } 
       }
       partStr = str.substring(lastSpace + 1, length);
