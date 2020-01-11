@@ -7,7 +7,7 @@ public class DebugFive4 {
    public static void main (String args[]) 
    {
       int one, two, three, four;
-      String str, output;
+      String str, output="";
       str = JOptionPane.showInputDialog(null,"Enter an integer");
       one = Integer.parseInt(str);
       str = JOptionPane.showInputDialog(null,"Enter an integer");
