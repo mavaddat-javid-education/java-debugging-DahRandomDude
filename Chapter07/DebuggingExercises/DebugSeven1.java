@@ -7,7 +7,11 @@ public class DebugSeven1
       String name2 = "Roger";
       String name3 = "Stacy";
 
-      if(name1== name2)
+      System.out.println("(name1 == name2) is "+(name1 == name2));
+      System.out.println("(name1 == name3) is "+(name1 == name3));
+      System.out.println("(name1 == \"roger\") is "+(name1 == "roger"));
+      System.out.println("(name1 == \"Roger\") is "+(name1 == "Roger"));
+      if(name1 == name2)
         System.out.println(name1 + " and " + name2 +
           " are the same");
       if(name1 == name3)

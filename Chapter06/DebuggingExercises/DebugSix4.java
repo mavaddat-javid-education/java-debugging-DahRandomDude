@@ -6,8 +6,8 @@ public class DebugSix4
 {
    public static void main(String[] args)
    {
-      int high, low, count;
-      final int NUM = 5;
+      int high, low, count=1;
+      final int NUM = 1000000;
       Scanner input = new Scanner(System.in);
       // Prompt user to enter high and low values
       System.out.print("This application displays " + NUM +
@@ -25,18 +25,16 @@ public class DebugSix4
          high = input.nextInt();
       }
 
-      while(count <= low)
+      while(count <= NUM)
       {
          double result = Math.random();
           // random() returns value between 0 and 1
-         int answer = (int) (result * 10 + low);
+         int answer = (int) Math.round(result * (double)(high  - low) + (double)low);
           // multiply by 10 and add low -- random is at least the value of low
           // only use answer if it is low enough
-         if(answer <= low)
-         {
+         
             System.out.print(answer + "  ");
             ++count;
-         }
       }
       System.out.println();
    }
