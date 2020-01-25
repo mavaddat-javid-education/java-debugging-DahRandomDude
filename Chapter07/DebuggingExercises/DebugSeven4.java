@@ -8,21 +8,21 @@ public class DebugSeven4
       String aString = "HELP!! I need to get 37 things DONE today!!"; 
       int numLetters = 0;
       int stringLength = aString.length(); //suppose it's 33
-      int NotLetter = 0
+      int NotLetter = 0;
       System.out.println("In all lowercase, the sentence is: ");
       for(int i = 0; i < stringLength; i++)
       {
          char ch = Character.toLowerCase(aString.charAt(i));
          System.out.print(ch);
-         if(Character.isLetter(' '))
+         if(Character.isLetter(ch))
             numLetters++;
          
-         if(Character.isAlphabetic())
-            
+         if(!Character.isAlphabetic(ch))
+            NotLetter++;
       }
-      int ActualAmount =
+      int actualAmount = stringLength - NotLetter;
       System.out.println();
       System.out.println("The number of CHARACTERS in the string is " + stringLength);
-      System.out.println("The number of LETTERS is " + stringLength);
+      System.out.println("The number of LETTERS is " + actualAmount + " which is supposed to be the same as " + numLetters);
    }
 }
