@@ -5,20 +5,24 @@ public class DebugSeven4
 {
    public static void main(String[] args)
    {
-      String aString = "HELP!! I need to get 37 things DONE today!!";
+      String aString = "HELP!! I need to get 37 things DONE today!!"; 
       int numLetters = 0;
-      int stringLength = aString.length;
+      int stringLength = aString.length(); //suppose it's 33
+      int NotLetter = 0
       System.out.println("In all lowercase, the sentence is: ");
-      for(int i = 0; i < length; i++)
+      for(int i = 0; i < stringLength; i++)
       {
-         char ch = Character.toLowerCase(aString.charAt(length));
+         char ch = Character.toLowerCase(aString.charAt(i));
          System.out.print(ch);
-         if(Character.isLetter())
+         if(Character.isLetter(' '))
             numLetters++;
+         
+         if(Character.isAlphabetic())
+            
       }
+      int ActualAmount =
       System.out.println();
-      System.out.println
-         ("The number of CHARACTERS in the string is " + stringLength);
+      System.out.println("The number of CHARACTERS in the string is " + stringLength);
       System.out.println("The number of LETTERS is " + stringLength);
    }
 }
