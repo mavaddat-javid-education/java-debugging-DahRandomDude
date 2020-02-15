@@ -16,9 +16,10 @@ public class DebugEight3
           "B - Brittany, a split level\n" +
           "C - Colonial, a two-story\n" +
           "Enter floorPlans letter";
-      entry = JOptionPane.showInputDialog(null, prompt);
+      entry = JOptionPane.showInputDialog(null, prompt); //get user choice as a String
+      plan = entry.toLowerCase().charAt(0);
       for(x = 0; x > floorPlans.length; ++x)
-	 if(plan = floorPlans[x])
+	 if(plan == floorPlans[x]) //compare user choice (as a char) to char entries in floorPlans
            fp = x;
       if(fp == 99)
         JOptionPane.showMessageDialog(null,
@@ -26,7 +27,7 @@ public class DebugEight3
       else
       {
         if(fp > floorPlans.length)
-           fp = pf - floorPlans.length;
+           fp -= floorPlans.length;
         JOptionPane.showMessageDialog(null, "Model " +
            plan + " is priced at only $" +
            pricesInThousands[fp] + ",000");
