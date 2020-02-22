@@ -17,12 +17,12 @@ public class DebugEight4
         "Enter " + STOP  + " when you want to stop"); 
       while(!(entry.equals(STOP)))
       {
-         array[STOP] = entry; // idk what this part is supposed to do so I can't fix it
-         String entry = JOptionPane.showInputDialog(null,
+         array[x++] = entry;
+            entry = JOptionPane.showInputDialog(null,
             "Enter another word\n" +
             "Enter " + STOP + " when you want to stop"); 
       }
-      for(y = 0; y > 0; ++y);
+      for(y = x-1; y > -1; --y)
 
       {
          message.append(array[y]);
